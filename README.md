@@ -4,6 +4,8 @@
 
 We are buiding an api server that will take the provided `data.json` file in the root of the repo load it into memeory and serve that data via REST endpoints.
 
+Upon start the service will load the json file and store it in memory. then be able to update delete, or add to it.
+
 ### The endpoints
 
 - /tweets: 
@@ -35,7 +37,13 @@ We are buiding an api server that will take the provided `data.json` file in the
   - Payload: TBD
 - /tweets/{:id}
   - Method: PUT
-  - Status Code Success: 201
+  - Status Code Success: 202
+  - Desc: based on the  
+  - Input: TBD
+  - Payload: TBD
+- /tweets/{:id}
+  - Method: DELETE
+  - Status Code Success: 202
   - Desc: based on the  
   - Input: TBD
   - Payload: TBD
