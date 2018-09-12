@@ -10,7 +10,8 @@ Upon start the service will load the json file and store it in memory. then be a
 
 ## The requirements
 
-- Must implement all endpoints mapped out below
+- Must implement all endpoints mapped out below\
+- Should listen on 12.0.0.1, or 0.0.0.0
 - Must have at the following cli flags
   - a flag to set the port
   
