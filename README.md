@@ -49,6 +49,7 @@ Upon start the service will load the json file and store it in memory. then be a
     - id: id to specific tweet
   - Desc: Get a single tweet by ID
   - Payload:
+
 ```json
   {
     "id": 32,
@@ -57,11 +58,13 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ```
+
 - /tweets
   - Method: POST
   - Status Code Success: 201
   - Desc: based on the
   - Input: 
+
 ```json
   {
     "name": "dolorem architecto ut pariatur quae qui suscipit",
@@ -69,7 +72,9 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ```
+
   - Payload:
+
 ```json
   {
     "id": 33,
@@ -78,11 +83,13 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ```
+
 - /tweets/{:id}
   - Method: PUT
   - Status Code Success: 202
   - Desc: based on the  
   - Input:
+
 ```json
   {
     "id": 33,
@@ -91,7 +98,9 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ```
+
   - Payload:
+
 ```json
   {
     "id": 33,
@@ -100,11 +109,13 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ```
+
 - /tweets/{:id}
   - Method: DELETE
   - Status Code Success: 202
   - Desc: based on the  
   - Payload:
+
 ```json
   {
     "id": 33,
