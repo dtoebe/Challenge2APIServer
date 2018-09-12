@@ -12,7 +12,17 @@ Upon start the service will load the json file and store it in memory. then be a
   - Method: GET 
   - Status Code Success: 200 
   - Desc: get all the tweets
-  - Payload: TDB
+  - Payload:
+  ```json
+[
+  {
+    "id": 32,
+    "name": "dolorem architecto ut pariatur quae qui suscipit",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+]
+  ```
 - /tweets?size=10&from=1
   - Method: GET
   - Status Code Success: 200
@@ -21,32 +31,88 @@ Upon start the service will load the json file and store it in memory. then be a
     - from: offset of tweets to return
   - Desc: Only get a selected amount of tweets starting with the from offset
     - from: 1 == array[0]
-  - Payload: TDB
+  - Payload: 
+  ```json
+[  
+  {
+    "id": 32,
+    "name": "dolorem architecto ut pariatur quae qui suscipit",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+]
+  ```
 - /tweets/{:id}
   - Method: GET
   - Status Code Success: 200
   - Params:
     - id: id to specific tweet
   - Desc: Get a single tweet by ID
-  - Payload: TDB
+  - Payload:
+```json
+  {
+    "id": 32,
+    "name": "dolorem architecto ut pariatur quae qui suscipit",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+```
 - /tweets
   - Method: POST
   - Status Code Success: 201
   - Desc: based on the
-  - Input: TBD  
-  - Payload: TBD
+  - Input: 
+```json
+  {
+    "name": "dolorem architecto ut pariatur quae qui suscipit",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+```
+  - Payload:
+```json
+  {
+    "id": 33,
+    "name": "dolorem architecto ut pariatur quae qui suscipit",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+```
 - /tweets/{:id}
   - Method: PUT
   - Status Code Success: 202
   - Desc: based on the  
-  - Input: TBD
-  - Payload: TBD
+  - Input:
+```json
+  {
+    "id": 33,
+    "name": "Changed",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+```
+  - Payload:
+```json
+  {
+    "id": 33,
+    "name": "Changed",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+```
 - /tweets/{:id}
   - Method: DELETE
   - Status Code Success: 202
   - Desc: based on the  
-  - Input: TBD
-  - Payload: TBD
+  - Payload:
+```json
+  {
+    "id": 33,
+    "name": "Changed",
+    "email": "Maria@laurel.name",
+    "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
+  }
+```
 
 ## How to add your project to this challenge
 
