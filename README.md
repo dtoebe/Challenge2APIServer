@@ -13,7 +13,8 @@ Upon start the service will load the json file and store it in memory. then be a
   - Status Code Success: 200 
   - Desc: get all the tweets
   - Payload:
-  ```json
+
+```json
 [
   {
     "id": 32,
@@ -22,7 +23,7 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ]
-  ```
+```
 - /tweets?size=10&from=1
   - Method: GET
   - Status Code Success: 200
