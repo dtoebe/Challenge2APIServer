@@ -8,10 +8,10 @@ Upon start the service will load the json file and store it in memory. then be a
 
 ### The endpoints
 
-- /tweets: 
+- /comments: 
   - Method: GET 
   - Status Code Success: 200 
-  - Desc: get all the tweets
+  - Desc: get all the comments
   - Payload:
 
 ```json
@@ -24,13 +24,13 @@ Upon start the service will load the json file and store it in memory. then be a
   }
 ]
 ```
-- /tweets?size=10&from=1
+- /comments?size=10&from=1
   - Method: GET
   - Status Code Success: 200
   - Query String:
-    - size: how many tweets to return
-    - from: offset of tweets to return
-  - Desc: Only get a selected amount of tweets starting with the from offset
+    - size: how many comments to return
+    - from: offset of comments to return
+  - Desc: Only get a selected amount of comments starting with the from offset
     - from: 1 == array[0]
   - Payload: 
 
@@ -45,12 +45,12 @@ Upon start the service will load the json file and store it in memory. then be a
 ]
 ```
 
-- /tweets/{:id}
+- /comments/{:id}
   - Method: GET
   - Status Code Success: 200
   - Params:
-    - id: id to specific tweet
-  - Desc: Get a single tweet by ID
+    - id: id to specific comment
+  - Desc: Get a single comment by ID
   - Payload:
 
 ```json
@@ -62,7 +62,7 @@ Upon start the service will load the json file and store it in memory. then be a
   }
 ```
 
-- /tweets
+- /comments
   - Method: POST
   - Status Code Success: 201
   - Desc: based on the
@@ -87,7 +87,7 @@ Upon start the service will load the json file and store it in memory. then be a
   }
 ```
 
-- /tweets/{:id}
+- /comments/{:id}
   - Method: PUT
   - Status Code Success: 202
   - Desc: based on the  
@@ -113,7 +113,7 @@ Upon start the service will load the json file and store it in memory. then be a
   }
 ```
 
-- /tweets/{:id}
+- /comments/{:id}
   - Method: DELETE
   - Status Code Success: 202
   - Desc: based on the  
