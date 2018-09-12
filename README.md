@@ -33,7 +33,8 @@ Upon start the service will load the json file and store it in memory. then be a
   - Desc: Only get a selected amount of tweets starting with the from offset
     - from: 1 == array[0]
   - Payload: 
-  ```json
+
+```json
 [  
   {
     "id": 32,
@@ -42,7 +43,8 @@ Upon start the service will load the json file and store it in memory. then be a
     "body": "nihil ea itaque libero illo\nofficiis quo quo dicta inventore consequatur voluptas voluptatem\ncorporis sed necessitatibus velit tempore\nrerum velit et temporibus"
   }
 ]
-  ```
+```
+
 - /tweets/{:id}
   - Method: GET
   - Status Code Success: 200
