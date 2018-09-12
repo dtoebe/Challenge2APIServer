@@ -134,7 +134,7 @@ Upon start the service will load the json file and store it in memory. then be a
   - https://gist.github.com/Chaser324/ce0505fbed06b947d962
   - Please do not merge yourself
 - Please use the following directory structure:
-  - /<git root>/<github usernme>/<language name>/<project root>
+  - /gitroot/githubusernme/languagename/projectroot
     - git root: is the root dir of the cloned git repo
     - github username: so we know who submitted it
     - language name: name of your project language
