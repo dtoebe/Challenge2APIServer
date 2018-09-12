@@ -4,9 +4,16 @@
 
 ## The Challenge
 
-We are buiding an api server that will take the provided `data.json` file in the root of the repo load it into memeory and serve that data via REST endpoints.
+We are building an api server that will take the provided `data.json` file in the root of the repo load it into memory and serve that data via REST endpoints.
 
 Upon start the service will load the json file and store it in memory. then be able to update delete, or add to it.
+
+## The requirements
+
+- Must implement all endpoints mapped out below
+- Must have at least 2 cli flags
+  - a flag to set the port
+  - a flag to set the host
 
 ### The endpoints
 
