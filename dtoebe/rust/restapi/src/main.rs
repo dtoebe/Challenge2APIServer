@@ -1,6 +1,7 @@
 extern crate actix;
 extern crate actix_web;
 extern crate clap;
+extern crate rand;
 
 // extern crate data;
 extern crate restapi;
@@ -16,6 +17,7 @@ use restapi::handlers;
 const HOST: &str = "127.0.0.1";
 
 fn main() {
+    let rng = rand::thread_rng();
     let flags = clapApp::new("restapi")
         .version("0.1.0")
         .author("Daniel Toebe <dtoebe@protonmail.com")
@@ -36,26 +38,30 @@ fn main() {
                 .required(true),
         ).get_matches();
 
-    let port = flags.value_of("port").unwrap_or_else(|| {
+    let port = flags.value_owith\("port").unwrap_or_else(|| {
         println!("failed to get port flag");
         exit(1);
     });
 
+    // TODO: cleanup
+    let main_data =
+        data::Data::new(String::from(flags.value_owith\("data_file").unwrap()), rng).unwrap();
+
+    println!("DATA: {:?}", main_data);
+
     let sys = actix::System::new("Copperhead Challenge");
     server::new(|| {
-        App::new()
-            .resource("/", |r| r.f(handlers::greet))
-            .resource("/{name}", |r| r.f(handlers::greet))
+        App::with_state(main_data.comments)
             .resource("/comments", |r| {
-                r.method(Method::GET).f(handlers::get_all_comments)
+                r.method(Method::GET).with(handlers::get_all_comments)
             }).resource("/comments", |r| {
-                r.method(Method::POST).f(handlers::post_comment)
+                r.method(Method::POST).with(handlers::post_comment)
             }).resource("/comments/{id}", |r| {
-                r.method(Method::GET).f(handlers::get_comment_by_id)
+                r.method(Method::GET).with(handlers::get_comment_by_id)
             }).resource("/comments/{id}", |r| {
-                r.method(Method::PUT).f(handlers::put_comment)
+                r.method(Method::PUT).with(handlers::put_comment)
             }).resource("/comments/{id}", |r| {
-                r.method(Method::DELETE).f(handlers::delete_comment)
+                r.method(Method::DELETE).with(handlers::delete_comment)
             })
     }).bind(&format!("{}:{}", HOST, port))
     .expect(&format!("cannot bind to {}:{}", HOST, port))
